@@ -1,0 +1,449 @@
+html {
+    box-sizing         : border-box;
+    font-family        : Arial, Helvetica, sans-serif;
+    text-shadow        : 1px 1px 2px #999;
+    background-image   : url("../img/bgwater.jpg");
+    background-position: center;
+    background-size    : cover;
+    scroll-behavior    : smooth;
+}
+
+body {
+    margin     : 30px 30px;
+    line-height: 1.4;
+}
+
+img {
+    max-width : 100%;
+    max-height: 100%;
+}
+
+.wrapper {
+    display : grid;
+    grid-gap: 20px;
+}
+
+.about,
+.bgimg,
+.otherlist,
+.commercial,
+.domestic,
+.gallery,
+.whappbtn,
+.fbbtn,
+.phobtn,
+.contactform,
+.footer {
+    border-width    : 3px;
+    border-style    : double;
+    border-color    : #000;
+    background-color: whitesmoke;
+    background-image: url("../img/water.png");
+    background-position: center;
+    background-size    : cover;
+}
+
+.header {
+    display              : grid;
+    padding              : 30px 30px 0px;
+    grid-template-areas  : ". hlogo htext .";
+    grid-template-columns: 1fr 30% 50% 1fr;
+}
+
+.headerlogo {
+    grid-area: hlogo;
+}
+
+.textlogo {
+    grid-area: htext;
+}
+
+.whappicon {
+    text-align: center;
+    grid-area : whapp;
+}
+
+.whappicon i,
+.whappbtn i {
+    background   : white;
+    color        : #4dc247;
+    border-radius: 10px;
+    border-width : 2px;
+    border-color : black;
+    border-style : solid;
+    padding      : 0 0.3rem;
+}
+
+.fbicon {
+    text-align: left;
+    grid-area : fb;
+}
+
+.fbicon i,
+.fbbtn i {
+    background   : white;
+    color        : #3b5998;
+    border-radius: 10px;
+    border-width : 2px;
+    padding      : 0 0.3rem;
+    border-color : black;
+    border-style : solid;
+}
+
+.phone {
+    text-align: center;
+    grid-area : phone;
+    font-size : 2.2rem;
+
+    padding: 10px;
+}
+
+.email a {
+    font-size: 1.4rem;
+}
+
+.phone a,
+.consroll a {
+    text-decoration: none;
+    color          : #000;
+}
+
+.contactbox {
+    overflow : auto;
+    padding  : 10px;
+    grid-area: contact;
+    display            : grid;
+    grid-gap           : 20px;
+    grid-template-areas: ". . . callbtn whapp fb . . ."
+        "phone phone phone phone phone phone phone phone phone";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.infobox {
+    padding: 20px;
+    text-align: center;
+}
+
+.commercial {
+    padding: 20px;
+    grid-area : comm;
+    text-align: center;
+}
+
+.domestic {
+    padding: 20px;
+    grid-area : domm;
+    text-align: center;
+}
+
+.otherlist {
+    padding: 20px;
+    grid-area          : other;
+    text-align         : center;
+    display            : grid;
+    grid-template-areas: ". list .";
+}
+
+.servicelist {
+    grid-area: list;
+}
+
+.servicelist li {
+    padding: 10px;
+}
+
+.services {
+    display              : grid;
+    grid-gap             : 20px;
+    grid-template-areas  : "domm comm other";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.whappicon :hover,
+.fbicon :hover,
+.whappbtn a :hover,
+.fbbtn a :hover,
+.phobtn a :hover,
+.callbtn a :hover,
+.consroll a :hover {
+    transform: scale(1.1);
+}
+
+a:hover[href^="tel:"],
+.email:hover,
+.femail:hover {
+    font-weight: bold;
+}
+
+.contactform {
+    grid-area: form;
+    padding  : 20px;
+    text-align: center;
+}
+
+.whappbtn {
+    grid-area: whappbtn;
+    padding  : 20px;
+    text-align: center;
+}
+
+.fbbtn {
+    grid-area: fbbtn;
+    padding  : 20px;
+    text-align: center;
+}
+
+.phobtn {
+    padding: 20px;
+    text-align: center;
+    grid-area : phobtn;
+}
+
+.phobtn i,
+.callbtn i {
+    background   : white;
+    color        : skyblue;
+    border-radius: 10px;
+    border-width : 2px;
+    padding      : 0 0.3rem;
+    border-color : black;
+    border-style : solid;
+}
+
+.callbtn {
+    grid-area : callbtn;
+    text-align: right;
+}
+
+
+
+.gallery img {
+    position: inherit;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.gallery {
+    grid-area: gally;
+    overflow : hidden;
+}
+
+.contactarea {
+    overflow           : auto;
+    display            : grid;
+    grid-gap           : 20px;
+    grid-template-areas: "form phobtn whappbtn fbbtn "
+        "form gally gally gally"
+        "form gally gally gally";
+    grid-template-columns: 50% 1fr 1fr 1fr;
+    grid-template-rows   : 34% 1fr auto;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width        : 100%;
+    /* Full width */
+    padding      : 12px;
+    /* Some padding */
+    border       : 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing   : border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top   : 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize       : vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    color           : #fff;
+    background-color: #4CAF50;
+    padding         : 12px 20px;
+    border          : solid;
+    border-radius   : 4px;
+    border-color    : black;
+    cursor          : pointer;
+    border-width    : 1px;
+}
+
+.about {
+    display            : grid;
+    grid-template-areas: ". infobox infobox infobox ."
+        "cleaner infobox infobox infobox ."
+        ". infobox infobox infobox .";
+    grid-template-columns: 200px 1fr 1fr 1fr 20px;
+}
+
+.cleaner {
+    grid-area   : cleaner;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.cleaner img {
+    max-height: 300px;
+}
+
+.femail a,
+.fphone a {
+    text-decoration: none;
+    color          : #000;
+}
+
+.fphone {
+    text-align: center;
+    grid-area : fphone;
+    font-size : 2.2rem;
+}
+
+.femail {
+    grid-area : femail;
+    text-align: center;
+    font-size : 0.8rem;
+}
+
+.infobox {
+    grid-area: infobox;
+}
+
+.logocw {
+    grid-area: cwlogo;
+}
+
+.logocw img {
+    vertical-align: middle;
+}
+
+.footer {
+    display            : grid;
+    grid-template-areas: "cwlogo fphone"
+        "cwlogo femail";
+    grid-template-columns: 100px auto;
+    grid-gap: 10px;
+    padding : 20px;
+}
+
+@media (max-width:1000px) {
+
+    .contactarea {
+        grid-gap           : 20px;
+        grid-template-areas: "phobtn gally "
+            "whappbtn gally"
+            "fbbtn gally"
+            "form form";
+        grid-template-columns: 120px 1fr;
+        grid-template-rows   : auto 1fr;
+    }
+
+    .whappbtn,
+    .fbbtn,
+    .phobtn {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:700px) {
+    .services {
+        grid-template-areas  : "domm""comm""other";
+        grid-template-columns: auto;
+    }
+
+    .contactarea {
+        grid-template-areas: "gally gally gally"
+            "phobtn whappbtn fbbtn"
+            "form form form";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows   : auto;
+    }
+
+    .gallery img {
+        display: block;
+    }
+
+    .header {
+        display              : grid;
+        padding              : 30px 30px 0px;
+        grid-template-areas  : "hlogo""htext";
+        grid-template-columns: auto;
+    }
+
+    .headerlogo {
+        margin-left : auto;
+        margin-right: auto;
+        width       : 80%;
+    }
+}
+
+@media (max-width:500px) {
+    body {
+        margin: 20px 20px;
+    }
+
+    .contactbox {
+        font-size          : 0.8rem;
+        grid-gap           : 10px;
+        grid-template-areas: "callbtn whapp fb"
+            "phone phone phone";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .phobtn i,
+    .callbtn i,
+    .whappbtn i,
+    .fbbtn i,
+    .whappicon i,
+    .fbicon i {
+        border-radius: 5px;
+        padding      : 0 0.2rem;
+    }
+
+    .whappbtn,
+    .fbbtn,
+    .phobtn {
+        padding    : 5px;
+        font-size  : 0.6rem;
+        padding-top: 10px;
+    }
+
+    .contactarea {
+        grid-column-gap: 10px;
+    }
+
+    .email a {
+        font-size: 0.8rem;
+    }
+
+    .about {
+        grid-template-areas: " infobox "
+            "cleaner";
+        grid-template-columns: auto;
+        grid-template-rows   : auto;
+    }
+
+    .phone {
+        font-size: 1.8rem;
+    }
+
+    .fphone {
+        font-size: 1.5rem;
+    }
+
+    .femail {
+        font-size: 0.5rem;
+    }
+
+    .footer {
+        display            : grid;
+        grid-template-areas: "cwlogo fphone"
+            "cwlogo femail";
+        grid-template-columns: 50px auto;
+    }
+}
